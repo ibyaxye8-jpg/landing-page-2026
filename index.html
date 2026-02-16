@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Business</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f4f6f9;
+        }
+
+        header{
+            background: #0d6efd;
+            color:rgb(238, 236, 242);
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background: #111827;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:rgb(248, 246, 252);
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+        nav a:hover{
+                     color:yellow;
+                }
+
+        .hero{
+            padding:80px 20px;
+            text-align:center;
+            background: white;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn{
+    from{opacity:0; transform:translateY(-20px);}
+    to{opacity:1; transform:translateY(0);}
+      }
+
+        .hero h1{
+            font-size:40px;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:18px;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            background:#0d6efd;
+            color:white;
+            padding:12px 25px;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+    background:#084298;
+       }
+
+        .services{
+            padding:60px 20px;
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background: white;
+            padding:20px;
+            width:250px;
+            text-align:center;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            border-radius:8px;
+        }
+
+        .card:hover{
+    transform:scale(1.05);
+    transition:0.3s;
+        }
+
+       footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+
+        @media(max-width:768px){
+            .hero h1{
+                font-size:28px;
+            }
+        }
+
+        .menu-icon{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    nav{
+        display:none;
+        flex-direction:column;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu-icon{
+        display:block;
+        background:#111827;
+        padding:10px;
+        text-align:right;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>My online Business</h2>
+</header>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="#">whatsup</a>
+</nav>
+
+<section class="hero">
+    <h1>We Build Professional Websites</h1>
+    <p>Fast, Responsive and Modern Designs for your business.</p>
+   <p>“I will create modern responsive landing page with animations”</p>
+    <a href="#" class="btn">Get Started now</a>
+</section>
+
+<section class="services">
+    <div class="card">
+        <h3>Web Design</h3>
+        <p>Modern and clean website designs.</p>
+    </div>
+
+    <div class="card">
+        <h3>Development</h3>
+        <p>Dynamic systems using PHP & MySQL.</p>
+    </div>
+
+    <div class="card">
+        <h3>Support</h3>
+        <p>Bug fixing and website maintenance.</p>
+    </div>
+     <div class="card">
+        <h3>skills</h3>
+        <p>design and other.</p>
+    </div>
+</section>
+<section style="padding:50px; text-align:center; background:white;">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:ibyaxye8@gmail.com">ibyaxye8@gmail.com</a></p>
+    <p>Phone: +252 615543923</p>
+</section>
+
+<footer>
+    <p>© 2026 My Business | All Rights Reserved</p>
+</footer>
+<script>
+function toggleMenu(){
+    document.querySelector("nav").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
